@@ -365,7 +365,9 @@ Display:
 
 As you can see, the 'Display' UDT has been broken down to the 
 point of being able to describe it with C++ primitives. 
+*/
 
+/*
 ===================
 Part 1d - Step 2: Assignment
 ===================
@@ -404,6 +406,7 @@ example:
         height in cm (int)
 */
 
+
 /*
 =================
 Part 1d - Step 5: Commit
@@ -428,7 +431,6 @@ MOVE THEM to the space below this block comment and put them in numerical order
     I only want to see the 10 UDTs written BELOW this block comment, in numerical order (1 - 10).
     simply CUT and PASTE them in the space provided below:
 */
-/*
 
 Thing 1) Grocery Store
 5 properties:
@@ -442,29 +444,29 @@ Thing 1) Grocery Store
     2) charge customer
     3) bag groceries
 
-Thing 2) Airplane
+Thing 2) airplane
 5 properties:
     1) number of seats (int)
     2) number of engines (int)
     3) number of flights per week (int)
-    4) amount of fuel used per week (flot)
+    4) amount of fuel used per week (float)
     5) number of customers flown per week (int)
 3 things it can do:
     1) fly customer
     2) take off
     3) land
 
-Thing 3) laptop
+Thing 3) television
 5 properties:
-    1) number of keys (int)
-    2) screen resolution (int)
-    3) size of screen (int)
-    4) cpu speed (int)
-    5) amount of memory (int)
+    1) brand (std::string)
+    2) screen resolution (std::string)
+    3) size of screen diagonal inches (float)
+    4) number of usb inputs (int)
+    5) wifi version (float)
 3 things it can do:
-    1) play music
-    2) solve calculations
-    3) play movies
+    1) play audio
+    2) play video
+    3) stream entertainment
 
 Thing 4) refrigerator
 5 properties:
@@ -482,9 +484,9 @@ Thing 5) Keyboard
 5 properties:
     1) key height mm (double)
     2) key travel mm (double)
-    3) backlit (bool)
-    4) number pad (bool)
-    5) caps lock (bool)
+    3) number of keys (int)
+    4) length in cm (float)
+    5) width in cm (float)
 3 things it can do:
     1) illuminate
     2) enter data
@@ -506,9 +508,9 @@ Thing 7) Display
 5 properties:
     1) number of pixels (double)
     2) refresh rate (float)
-    3) size width (float)
-    4) size height (float)
-    5) touchscreen (bool)
+    3) width (float)
+    4) height (float)
+    5) maximum brightness (float)
 3 things it can do:
     1) change brightness
     2) change resolution
@@ -549,7 +551,7 @@ Thing 10) Laptop
     1) play audio
     2) play video
     3) run an application
-
+    
 /*
 =================
 Part 1d - Step 7: Commit
