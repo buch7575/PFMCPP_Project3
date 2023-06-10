@@ -427,7 +427,7 @@ MOVE THEM to the space below this block comment and put them in numerical order
 (1 - 10).
     DO NOT COPY. 
     CUT AND PASTE. 
-    I do not want to see 2 copies of your Plain-English UDTs.  
+    I do not want to see 2 copies of your Plain-English UDTs.
     I only want to see the 10 UDTs written BELOW this block comment, in numerical order (1 - 10).
     simply CUT and PASTE them in the space provided below:
 */
