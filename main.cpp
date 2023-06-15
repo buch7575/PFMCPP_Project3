@@ -446,7 +446,16 @@ Thing 1) Grocery Store
 
 struct GroceryStore
 {
-    
+    //5 properties:
+    //    - number of employees (int)
+    //    - amount of groceries sold per week (float)
+    //    - amount of profit made per week (float)
+    //    - number of shopping carts (int)
+    //    - number of square feet (float)
+    //3 things it can do:
+    //    - provide groceries
+    //    - charge customer
+    //    - bag groceries
 };
     
 Thing 2) airplane
@@ -463,7 +472,16 @@ Thing 2) airplane
 
 struct Airplane
 {
-    
+    //5 properties:
+    //    - number of seats (int)
+    //    - number of engines (int)
+    //    - number of flights per week (int)
+    //    - amount of fuel used per week (float)
+    //    - number of customers flown per week (int)
+    //3 things it can do:
+    //    - fly customer
+    //    - take off
+    //    - land
 };
     
 Thing 3) television
@@ -480,7 +498,16 @@ Thing 3) television
 
 struct Television
 {
-    
+    //5 properties:
+    //    - brand (std::string)
+    //    - screen resolution (std::string)
+    //    - size of screen diagonal inches (float)
+    //    - number of usb inputs (int)
+    //    - wifi version (float)
+    //3 things it can do:
+    //    - play audio
+    //    - play video
+    //    - stream entertainment
 };
     
 Thing 4) refrigerator
@@ -497,7 +524,16 @@ Thing 4) refrigerator
 
 struct Refrigerator
 {
-    
+    //5 properties:
+    //    - number of shelves (int)
+    //    - interior size in sq. inches (float)
+    //    - color (std::string)
+    //    - amount of electricity used (float)
+    //    - loudness in decibels (float)
+    //3 things it can do:
+    //    - keep food cold
+    //    - keep food frozen
+    //    - make ice
 };
     
 Thing 5) Keyboard
@@ -514,7 +550,16 @@ Thing 5) Keyboard
 
 struct Keyboard
 {
-    
+    //5 properties:
+    //    - key height mm (double)
+    //    - key travel mm (double)
+    //    - number of keys (int)
+    //    - length in cm (float)
+    //    - width in cm (float)
+    //3 things it can do:
+    //    - illuminate
+    //    - enter data
+    //    - control audio
 };
     
 Thing 6) Speakers
@@ -531,7 +576,16 @@ Thing 6) Speakers
 
 struct Speakers
 {
-    
+    //5 properties:
+    //    - number of speakers (int)
+    //    - frequency range (double)
+    //    - power consumption (float)
+    //    - size of speakers (float)
+    //    - shape of speakers (std::string)
+    //3 things it can do:
+    //    - play music
+    //    - sound alerts
+    //    - increase/decrease volume
 };
     
 Thing 7) Display
@@ -548,7 +602,16 @@ Thing 7) Display
 
 struct Display
 {
-    
+    //5 properties:
+    //    - number of pixels (double)
+    //    - refresh rate (float)
+    //    - width (float)
+    //    - height (float)
+    //    - maximum brightness (float)
+    //3 things it can do:
+    //    - change brightness
+    //    - change resolution
+    //    - turn pixels on and off
 };
     
 Thing 8) CPU
@@ -565,7 +628,16 @@ Thing 8) CPU
 
 struct Cpu
 {
-    
+    //5 properties:
+    //    - speed in ghz (float)
+    //    - number of cores (int)
+    //    - brand (std::string)
+    //    - power consumed (float)
+    //    - amount of cache mb (float)
+    //3 things it can do:
+    //    - perform calculations
+    //    - consume energy
+    //    - create heat
 };
     
 Thing 9) Memory
@@ -582,7 +654,16 @@ Thing 9) Memory
 
 struct Memory
 {
-    
+    //5 properties:
+    //    - amount in gb (float)
+    //    - form factor (std::string)
+    //    - price (float)
+    //    - brand (std::string)
+    //    - model number (std::string)
+    //3 things it can do:
+    //    - store user data
+    //    - consume energy
+    //    - store machine data
 };
     
 Thing 10) Laptop
@@ -599,7 +680,16 @@ Thing 10) Laptop
 
 struct Laptop
 {
-    
+    //5 properties:
+    //    - Keyboard
+    //    - Speakers
+    //    - Display
+    //    - CPU
+    //    - Memory
+    //3 things it can do:
+    //    - play audio
+    //    - play video
+    //    - run an application
 };
     
 /*
