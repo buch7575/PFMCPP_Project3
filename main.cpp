@@ -444,6 +444,11 @@ Thing 1) Grocery Store
     2) charge customer
     3) bag groceries
 
+struct GroceryStore
+{
+    
+};
+    
 Thing 2) airplane
 5 properties:
     1) number of seats (int)
@@ -456,6 +461,11 @@ Thing 2) airplane
     2) take off
     3) land
 
+struct Airplane
+{
+    
+};
+    
 Thing 3) television
 5 properties:
     1) brand (std::string)
@@ -468,6 +478,11 @@ Thing 3) television
     2) play video
     3) stream entertainment
 
+struct Television
+{
+    
+};
+    
 Thing 4) refrigerator
 5 properties:
     1) number of shelves (int)
@@ -480,6 +495,11 @@ Thing 4) refrigerator
     2) keep food frozen
     3) make ice
 
+struct Refrigerator
+{
+    
+};
+    
 Thing 5) Keyboard
 5 properties:
     1) key height mm (double)
@@ -492,6 +512,11 @@ Thing 5) Keyboard
     2) enter data
     3) control audio
 
+struct Keyboard
+{
+    
+};
+    
 Thing 6) Speakers
 5 properties:
     1) number of speakers (int)
@@ -504,6 +529,11 @@ Thing 6) Speakers
     2) sound alerts
     3) increase/decrease volume
 
+struct Speakers
+{
+    
+};
+    
 Thing 7) Display
 5 properties:
     1) number of pixels (double)
@@ -516,6 +546,11 @@ Thing 7) Display
     2) change resolution
     3) turn pixels on and off
 
+struct Display
+{
+    
+};
+    
 Thing 8) CPU
 5 properties:
     1) speed in ghz (float)
@@ -528,6 +563,11 @@ Thing 8) CPU
     2) consume energy
     3) create heat
 
+struct Cpu
+{
+    
+};
+    
 Thing 9) Memory
 5 properties:
     1) amount in gb (float)
@@ -540,6 +580,11 @@ Thing 9) Memory
     2) consume energy
     3) store machine data
 
+struct Memory
+{
+    
+};
+    
 Thing 10) Laptop
 5 properties:
     1) Keyboard
@@ -551,6 +596,11 @@ Thing 10) Laptop
     1) play audio
     2) play video
     3) run an application
+
+struct Laptop
+{
+    
+};
     
 /*
 =================
