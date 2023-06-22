@@ -448,10 +448,15 @@ struct GroceryStore
 {
     //5 properties:
     //    - number of employees (int)
-    //    - amount of groceries sold per week (float)
+    int numEmployees = 215;
+    //    - amount of groceries sold per week in dollars (float)
+    float amtGroceriesSold = 410443.77f;
     //    - amount of profit made per week (float)
+    float amtProfitWeekly = 87944.36f;
     //    - number of shopping carts (int)
+    int numShoppingCarts = 128;
     //    - number of square feet (float)
+    float numSqaureFeet = 85776.;
     //3 things it can do:
     //    - provide groceries
     //    - charge customer
@@ -474,10 +479,15 @@ struct Airplane
 {
     //5 properties:
     //    - number of seats (int)
+    int numSeats = 120;
     //    - number of engines (int)
+    int numEngines = 2;
     //    - number of flights per week (int)
-    //    - amount of fuel used per week (float)
+    int numFlightsWeekly = 14;
+    //    - amount of fuel used per week in gallons (float)
+    float amtFuelUsedWeekly = 1877.35;
     //    - number of customers flown per week (int)
+    int numCustomersFlownWeekly = 1532;
     //3 things it can do:
     //    - fly customer
     //    - take off
@@ -500,10 +510,15 @@ struct Television
 {
     //5 properties:
     //    - brand (std::string)
+    std::string brand = "LG";
     //    - screen resolution (std::string)
+    std:string screenResolution = "1080p";
     //    - size of screen diagonal inches (float)
+    float screenSize = 32.f;
     //    - number of usb inputs (int)
+    int numUSB = 3;
     //    - wifi version (float)
+    float wifiVersion = 6.;
     //3 things it can do:
     //    - play audio
     //    - play video
@@ -526,10 +541,15 @@ struct Refrigerator
 {
     //5 properties:
     //    - number of shelves (int)
-    //    - interior size in sq. inches (float)
+    int numShelves = 6;
+    //    - interior size in cu. ft. (float)
+    float interiorSize 28.0f;
     //    - color (std::string)
-    //    - amount of electricity used (float)
+    std::string color = "White"
+    //    - amount of electricity used kw hours per day (float)
+    float energyUsed = 1.8f;
     //    - loudness in decibels (float)
+    float loudness = 34.;
     //3 things it can do:
     //    - keep food cold
     //    - keep food frozen
@@ -552,10 +572,15 @@ struct Keyboard
 {
     //5 properties:
     //    - key height mm (double)
+    double keyHeight = 5.5;
     //    - key travel mm (double)
+    double keyTravel = 3.2;
     //    - number of keys (int)
+    int numKeys = 102;
     //    - length in cm (float)
+    float length = 43.94f;
     //    - width in cm (float)
+    float width = 13.97f;
     //3 things it can do:
     //    - illuminate
     //    - enter data
@@ -578,10 +603,15 @@ struct Speakers
 {
     //5 properties:
     //    - number of speakers (int)
-    //    - frequency range (double)
-    //    - power consumption (float)
-    //    - size of speakers (float)
+    int numSpeakers = 2;
+    //    - frequency range in Hz (double)
+    double frequency = 125.0;
+    //    - power consumption in watts (float)
+    float powerConsumption = 50.5f;
+    //    - size of speakers in inches (float)
+    float speakersize = 3.6f;
     //    - shape of speakers (std::string)
+    std::string speakerShape = "oval";
     //3 things it can do:
     //    - play music
     //    - sound alerts
@@ -591,10 +621,10 @@ struct Speakers
 Thing 7) Display
 5 properties:
     1) number of pixels (double)
-    2) refresh rate (float)
+    2) refresh rate in Hz (float)
     3) width (float)
     4) height (float)
-    5) maximum brightness (float)
+    5) maximum brightness in nits (float)
 3 things it can do:
     1) change brightness
     2) change resolution
@@ -604,10 +634,15 @@ struct Display
 {
     //5 properties:
     //    - number of pixels (double)
+    double numPixels = 2073600.;
     //    - refresh rate (float)
+    float refreshRate = 60.0f;
     //    - width (float)
+    float displayWidth = 13.60f;
     //    - height (float)
+    float displayHeight = 7.65f;
     //    - maximum brightness (float)
+    float maximumBrightness = 255.f;
     //3 things it can do:
     //    - change brightness
     //    - change resolution
@@ -630,10 +665,15 @@ struct Cpu
 {
     //5 properties:
     //    - speed in ghz (float)
+    float cpuSpeed = 2.4f;
     //    - number of cores (int)
+    int numCores = 4;
     //    - brand (std::string)
-    //    - power consumed (float)
+    std::string brand = "HP";
+    //    - power consumed in watts per hour(float)
+    float powerConsumed = 85.2f;
     //    - amount of cache mb (float)
+    float memoryCache = 2.5f; 
     //3 things it can do:
     //    - perform calculations
     //    - consume energy
@@ -644,7 +684,7 @@ Thing 9) Memory
 5 properties:
     1) amount in gb (float)
     2) form factor (std::string)
-    3) price (float)
+    3) price in US dollars (float)
     4) brand (std::string)
     5) model number (std::string)
 3 things it can do:
@@ -656,10 +696,15 @@ struct Memory
 {
     //5 properties:
     //    - amount in gb (float)
+    float amtMemory = 16f;
     //    - form factor (std::string)
+    std::string memoryFF = "DDR4";
     //    - price (float)
+    float price = "499.99f";
     //    - brand (std::string)
+    std::string brand = "Kingston";
     //    - model number (std::string)
+    std::string model = "KF432S20IB/16";
     //3 things it can do:
     //    - store user data
     //    - consume energy
@@ -682,6 +727,7 @@ struct Laptop
 {
     //5 properties:
     //    - Keyboard
+    
     //    - Speakers
     //    - Display
     //    - CPU
