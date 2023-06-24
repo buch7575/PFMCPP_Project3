@@ -459,8 +459,11 @@ struct GroceryStore
     float numSqaureFeet = 85776.;
     //3 things it can do:
     //    - provide groceries
-    //    - charge customer
-    //    - bag groceries
+    void groceries();
+    //    - charge customer  //NOTE: function parameter is relevant to the amount of groceries purchased plus taxes
+    float chargeCustomer(float groceriesPurchased);
+    //    - bag groceries  //NOTE: returns number of bags used based on amount of groceries purchased
+    int bagGroceries(float groceriesPurchased);
 };
     
 Thing 2) airplane
@@ -490,8 +493,11 @@ struct Airplane
     int numCustomersFlownWeekly = 1532;
     //3 things it can do:
     //    - fly customer
+    void flyCustomer();
     //    - take off
+    void takeOff();
     //    - land
+    void land();
 };
     
 Thing 3) television
@@ -521,8 +527,11 @@ struct Television
     float wifiVersion = 6.;
     //3 things it can do:
     //    - play audio
+    void playAudio();
     //    - play video
+    void playVideo();
     //    - stream entertainment
+    void streamVideo();
 };
     
 Thing 4) refrigerator
@@ -552,8 +561,11 @@ struct Refrigerator
     float loudness = 34.;
     //3 things it can do:
     //    - keep food cold
+    void keepFoodCold();
     //    - keep food frozen
+    void keepFoodFrozen();
     //    - make ice
+    void makeIce();
 };
     
 Thing 5) Keyboard
@@ -583,8 +595,11 @@ struct Keyboard
     float width = 13.97f;
     //3 things it can do:
     //    - illuminate
+    void illuminate();
     //    - enter data
+    void enterData();
     //    - control audio
+    void controlAudio();
 };
     
 Thing 6) Speakers
@@ -614,8 +629,11 @@ struct Speakers
     std::string speakerShape = "oval";
     //3 things it can do:
     //    - play music
+    void playMusic();
     //    - sound alerts
+    void soundAlerts();
     //    - increase/decrease volume
+    void adjustVolume();
 };
     
 Thing 7) Display
@@ -645,8 +663,11 @@ struct Display
     float maximumBrightness = 255.f;
     //3 things it can do:
     //    - change brightness
+    void adjustBrightness();
     //    - change resolution
+    void changeResolution();
     //    - turn pixels on and off
+    void pixels();
 };
     
 Thing 8) CPU
@@ -676,8 +697,11 @@ struct Cpu
     float memoryCache = 2.5f; 
     //3 things it can do:
     //    - perform calculations
+    void performCalculations();
     //    - consume energy
+    void consumeEnergy();
     //    - create heat
+    void createHeat();
 };
     
 Thing 9) Memory
@@ -707,8 +731,11 @@ struct Memory
     std::string model = "KF432S20IB/16";
     //3 things it can do:
     //    - store user data
+    void storeUserData();
     //    - consume energy
+    void consumeEnergy();
     //    - store machine data
+    void storeMachineData();
 };
     
 Thing 10) Laptop
@@ -727,15 +754,17 @@ struct Laptop
 {
     //5 properties:
     //    - Keyboard
-    
     //    - Speakers
     //    - Display
     //    - CPU
     //    - Memory
     //3 things it can do:
     //    - play audio
+    void playAudio();
     //    - play video
+    void playVideo();
     //    - run an application
+    void runApp();
 };
     
 /*
