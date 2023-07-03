@@ -432,6 +432,7 @@ MOVE THEM to the space below this block comment and put them in numerical order
     simply CUT and PASTE them in the space provided below:
 */
 
+/*
 Thing 1) Grocery Store
 5 properties:
     1) number of employees (int)
@@ -443,6 +444,7 @@ Thing 1) Grocery Store
     1) provide groceries
     2) charge customer
     3) bag groceries
+*/
 
 struct GroceryStore
 {
@@ -457,6 +459,26 @@ struct GroceryStore
     int numShoppingCarts = 128;
     //    - number of square feet (float)
     float numSqaureFeet = 85776.;
+
+//this is the nested UDT:
+    struct building                  
+    {
+        //5 member variables with relevant data types.  the names are relevant to the UDT's purpose.
+        float numSqaureFeet = 85776.f;   // - size of building in sq. ft.
+        int yearPurchased = 1997;   // - year building was purchased
+        float amtPropertyTax = 3225.55f;   // - amount of property taxes per year
+        std::string securityCompany = "Acme Security";   // - name of security company
+        bool alarmOn = true;   // - is security system armed
+
+        // 3 member functions.  
+        // they take multiple parameters. some parameters have default values.
+        // the parameter names are related to the work the function will perform.
+        // all function and variable names conform to the course coding standard, described in the Readme.MD file
+        void repairs(std::string repairType, float costLabor = 500.00, float costMaterial = 200.00);
+        void costUtilities(float costElectricity = 579.22f, float costWater = 179.36f, float costNaturalGas = 87.35f);
+        void payMortgage(std::string bankName, float amtPayment = 3500.00f);
+    }; //this is the end of the nested class
+
     //3 things it can do:
     //    - provide groceries
     void groceries();
@@ -465,7 +487,8 @@ struct GroceryStore
     //    - bag groceries  //NOTE: returns number of bags used based on amount of groceries purchased
     int bagGroceries(float groceriesPurchased);
 };
-    
+
+/*
 Thing 2) airplane
 5 properties:
     1) number of seats (int)
@@ -477,6 +500,7 @@ Thing 2) airplane
     1) fly customer
     2) take off
     3) land
+*/
 
 struct Airplane
 {
@@ -488,9 +512,29 @@ struct Airplane
     //    - number of flights per week (int)
     int numFlightsWeekly = 14;
     //    - amount of fuel used per week in gallons (float)
-    float amtFuelUsedWeekly = 1877.35;
+    float amtFuelUsedWeekly = 1877.35f;
     //    - number of customers flown per week (int)
     int numCustomersFlownWeekly = 1532;
+
+    //this is the nested UDT:
+    struct passenger                  
+    {
+        //5 member variables with relevant data types.  the names are relevant to the UDT's purpose.
+        int age passengerAge = 55;   // passenger's age
+        bool memberFFClub = true;    // member of frequent flyer club
+        int ffClubMemberNumber = 1111;   // - frequent flyer club number
+        std::string customerName = "John Doe";  // customer's first and last name
+        std::string customerNationality ="American";  // customer's nationality
+
+        // 3 member functions.  
+        // they take multiple parameters. some parameters have default values.
+        // the parameter names are related to the work the function will perform.
+        // all function and variable names conform to the course coding standard, described in the Readme.MD file
+        void provideMeal(std::string mealType = lunch);
+        void dietRestrictions(bool nonDairy = false, bool nutAllergy = false, bool vegetarian = false);
+        float getMilesTraveledAnnually(); // returns the number of miles customer traveled previous year
+    }; //this is the end of the nested class
+
     //3 things it can do:
     //    - fly customer
     void flyCustomer();
@@ -499,7 +543,8 @@ struct Airplane
     //    - land
     void land();
 };
-    
+
+/*
 Thing 3) television
 5 properties:
     1) brand (std::string)
@@ -511,6 +556,7 @@ Thing 3) television
     1) play audio
     2) play video
     3) stream entertainment
+*/
 
 struct Television
 {
@@ -518,13 +564,13 @@ struct Television
     //    - brand (std::string)
     std::string brand = "LG";
     //    - screen resolution (std::string)
-    std:string screenResolution = "1080p";
+    std::string screenResolution = "1080p";
     //    - size of screen diagonal inches (float)
     float screenSize = 32.f;
     //    - number of usb inputs (int)
     int numUSB = 3;
     //    - wifi version (float)
-    float wifiVersion = 6.;
+    float wifiVersion = 6.f;
     //3 things it can do:
     //    - play audio
     void playAudio();
@@ -533,7 +579,8 @@ struct Television
     //    - stream entertainment
     void streamVideo();
 };
-    
+
+/*
 Thing 4) refrigerator
 5 properties:
     1) number of shelves (int)
@@ -545,6 +592,7 @@ Thing 4) refrigerator
     1) keep food cold
     2) keep food frozen
     3) make ice
+*/
 
 struct Refrigerator
 {
@@ -552,13 +600,13 @@ struct Refrigerator
     //    - number of shelves (int)
     int numShelves = 6;
     //    - interior size in cu. ft. (float)
-    float interiorSize 28.0f;
+    float interiorSize = 28.0f;
     //    - color (std::string)
-    std::string color = "White"
+    std::string color = "White";
     //    - amount of electricity used kw hours per day (float)
     float energyUsed = 1.8f;
     //    - loudness in decibels (float)
-    float loudness = 34.;
+    float loudness = 34.f;
     //3 things it can do:
     //    - keep food cold
     void keepFoodCold();
@@ -567,7 +615,8 @@ struct Refrigerator
     //    - make ice
     void makeIce();
 };
-    
+
+/*
 Thing 5) Keyboard
 5 properties:
     1) key height mm (double)
@@ -579,6 +628,7 @@ Thing 5) Keyboard
     1) illuminate
     2) enter data
     3) control audio
+*/
 
 struct Keyboard
 {
@@ -601,7 +651,8 @@ struct Keyboard
     //    - control audio
     void controlAudio();
 };
-    
+
+/*
 Thing 6) Speakers
 5 properties:
     1) number of speakers (int)
@@ -613,6 +664,7 @@ Thing 6) Speakers
     1) play music
     2) sound alerts
     3) increase/decrease volume
+*/
 
 struct Speakers
 {
@@ -635,7 +687,8 @@ struct Speakers
     //    - increase/decrease volume
     void adjustVolume();
 };
-    
+
+/*
 Thing 7) Display
 5 properties:
     1) number of pixels (double)
@@ -647,6 +700,7 @@ Thing 7) Display
     1) change brightness
     2) change resolution
     3) turn pixels on and off
+*/
 
 struct Display
 {
@@ -669,7 +723,8 @@ struct Display
     //    - turn pixels on and off
     void pixels();
 };
-    
+
+/*
 Thing 8) CPU
 5 properties:
     1) speed in ghz (float)
@@ -681,6 +736,7 @@ Thing 8) CPU
     1) perform calculations
     2) consume energy
     3) create heat
+*/
 
 struct Cpu
 {
@@ -703,7 +759,8 @@ struct Cpu
     //    - create heat
     void createHeat();
 };
-    
+
+/*
 Thing 9) Memory
 5 properties:
     1) amount in gb (float)
@@ -715,16 +772,17 @@ Thing 9) Memory
     1) store user data
     2) consume energy
     3) store machine data
+*/
 
 struct Memory
 {
     //5 properties:
     //    - amount in gb (float)
-    float amtMemory = 16f;
+    float amtMemory = 16.f;
     //    - form factor (std::string)
     std::string memoryFF = "DDR4";
     //    - price (float)
-    float price = "499.99f";
+    float price = 99.99f;
     //    - brand (std::string)
     std::string brand = "Kingston";
     //    - model number (std::string)
@@ -737,7 +795,8 @@ struct Memory
     //    - store machine data
     void storeMachineData();
 };
-    
+
+/*
 Thing 10) Laptop
 5 properties:
     1) Keyboard
@@ -749,6 +808,7 @@ Thing 10) Laptop
     1) play audio
     2) play video
     3) run an application
+*/
 
 struct Laptop
 {
