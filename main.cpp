@@ -1083,7 +1083,7 @@ namespace Part1E_Step11
 {
 /*
 =================
-Part 1e - Step 11: Assignment
+Part 1e - Step 11: Assignment 
 =================
 4) make the function parameter lists for your UDTs' member functions use some of your User-Defined Types.  
     - You'll write definitions/implementations for these functions in Project3 Part2
