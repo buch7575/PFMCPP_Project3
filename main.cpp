@@ -461,31 +461,33 @@ struct GroceryStore
     float numSqaureFeet = 85776.;
 
 //this is the nested UDT:
-    struct building                  
+    struct Supplier   // Suppliers that deliver different products to the store             
     {
         //5 member variables with relevant data types.  the names are relevant to the UDT's purpose.
-        float numSqaureFeet = 85776.f;   // - size of building in sq. ft.
-        int yearPurchased = 1997;   // - year building was purchased
-        float amtPropertyTax = 3225.55f;   // - amount of property taxes per year
-        std::string securityCompany = "Acme Security";   // - name of security company
-        bool alarmOn = true;   // - is security system armed
+        std::string supplierName = "Darigold"   // - name of supplier
+        int supplierID = 11111;   // - supplier's ID number
+        std::string = driverName = "John";   // - name of supplier's delivery driver
+        std::string = supplierType = "Dairy";   // - type of products supplied
+        int numDeliveryTrucks = 24;   // - number of delivery trucks
 
         // 3 member functions.  
         // they take multiple parameters. some parameters have default values.
         // the parameter names are related to the work the function will perform.
         // all function and variable names conform to the course coding standard, described in the Readme.MD file
-        void repairs(std::string repairType, float costLabor = 500.00, float costMaterial = 200.00);
-        void costUtilities(float costElectricity = 579.22f, float costWater = 179.36f, float costNaturalGas = 87.35f);
-        void payMortgage(std::string bankName, float amtPayment = 3500.00f);
-    }; //this is the end of the nested class
+        void paySupplier(int invoiceNumber);  // pay the supplier's ivoice
+        void orderFilled(int orderNumber = 11111, float orderAmount, float dateDelivered, bool itemsMissing);
+        float placeNewOrder(int orderNumber, float orderAmount); // place a new order with supplier
+    }; 
+    //this is the end of the nested class
 
     //3 things it can do:
-    //    - provide groceries
-    void groceries();
+    //    - replenish inventory
+    void orderInventory(Supplier supplier); 
+    //    - amount of groceries sold per month in dollars
+    void sellGroceries(double amtGroceriesSold);  
     //    - charge customer  //NOTE: function parameter is relevant to the amount of groceries purchased plus taxes
-    float chargeCustomer(float groceriesPurchased);
-    //    - bag groceries  //NOTE: returns number of bags used based on amount of groceries purchased
-    int bagGroceries(float groceriesPurchased);
+    float chargeCustomer(float groceriesPurchased, float taxRate);
+
 };
 
 /*
@@ -517,7 +519,7 @@ struct Airplane
     int numCustomersFlownWeekly = 1532;
 
     //this is the nested UDT:
-    struct passenger                  
+    struct Passenger                  
     {
         //5 member variables with relevant data types.  the names are relevant to the UDT's purpose.
         int age passengerAge = 55;   // passenger's age
@@ -537,11 +539,11 @@ struct Airplane
 
     //3 things it can do:
     //    - fly customer
-    void flyCustomer();
+    void flyCustomer(Passenger passenger);
     //    - take off
-    void takeOff();
+    void takeOff(int flightNum);
     //    - land
-    void land();
+    void land(int flightNum);
 };
 
 /*
@@ -814,17 +816,22 @@ struct Laptop
 {
     //5 properties:
     //    - Keyboard
+    Keyboard keyboard;
     //    - Speakers
+    Speakers speakers;
     //    - Display
+    Display display;
     //    - CPU
+    Cpu cpu;
     //    - Memory
+    Memory memory;
     //3 things it can do:
     //    - play audio
-    void playAudio();
+    bool playAudio(std::string audioFileName);  // returns true if file is found and is the correct format
     //    - play video
-    void playVideo();
+    bool playVideo(std::string videoFileName);  // returns true if file is found and is the correct format
     //    - run an application
-    void runApp();
+    int runApp(std::string applicationName); // returns the amount of memory used by the application
 };
     
 /*
