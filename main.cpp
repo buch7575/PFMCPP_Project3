@@ -458,16 +458,16 @@ struct GroceryStore
     //    - number of shopping carts (int)
     int numShoppingCarts = 128;
     //    - number of square feet (float)
-    float numSqaureFeet = 85776.;
+    float numSqaureFeet = 85776.f;
 
 //this is the nested UDT:
     struct Supplier   // Suppliers that deliver different products to the store             
     {
         //5 member variables with relevant data types.  the names are relevant to the UDT's purpose.
-        std::string supplierName = "Darigold"   // - name of supplier
+        std::string supplierName = "Darigold";   // - name of supplier
         int supplierID = 11111;   // - supplier's ID number
-        std::string = driverName = "John";   // - name of supplier's delivery driver
-        std::string = supplierType = "Dairy";   // - type of products supplied
+        std::string driverName = "John";   // - name of supplier's delivery driver
+        std::string supplierType = "Dairy";   // - type of products supplied
         int numDeliveryTrucks = 24;   // - number of delivery trucks
 
         // 3 member functions.  
@@ -475,7 +475,7 @@ struct GroceryStore
         // the parameter names are related to the work the function will perform.
         // all function and variable names conform to the course coding standard, described in the Readme.MD file
         void paySupplier(int invoiceNumber);  // pay the supplier's ivoice
-        void orderFilled(int orderNumber = 11111, float orderAmount, float dateDelivered, bool itemsMissing);
+        void orderFilled(int orderNumber, float orderAmount, float dateDelivered, bool itemsMissing);
         float placeNewOrder(int orderNumber, float orderAmount); // place a new order with supplier
     }; 
     //this is the end of the nested class
@@ -522,7 +522,7 @@ struct Airplane
     struct Passenger                  
     {
         //5 member variables with relevant data types.  the names are relevant to the UDT's purpose.
-        int age passengerAge = 55;   // passenger's age
+        int passengerAge = 55;   // passenger's age
         bool memberFFClub = true;    // member of frequent flyer club
         int ffClubMemberNumber = 1111;   // - frequent flyer club number
         std::string customerName = "John Doe";  // customer's first and last name
@@ -532,7 +532,7 @@ struct Airplane
         // they take multiple parameters. some parameters have default values.
         // the parameter names are related to the work the function will perform.
         // all function and variable names conform to the course coding standard, described in the Readme.MD file
-        void provideMeal(std::string mealType = lunch);
+        void provideMeal(std::string mealType = "lunch");
         void dietRestrictions(bool nonDairy = false, bool nutAllergy = false, bool vegetarian = false);
         float getMilesTraveledAnnually(); // returns the number of miles customer traveled previous year
     }; //this is the end of the nested class
