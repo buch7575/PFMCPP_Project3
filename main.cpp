@@ -441,9 +441,9 @@ Thing 1) Grocery Store
     4) number of shopping carts (int)
     5) number of square feet (float)
 3 things it can do:
-    1) provide groceries
-    2) charge customer
-    3) bag groceries
+    1) replenish inventory
+    2) pay repair bill
+    3) charge customer
 */
 
 struct GroceryStore
@@ -454,7 +454,7 @@ struct GroceryStore
     //    - amount of groceries sold per week in dollars (float)
     float amtGroceriesSold = 410443.77f;
     //    - amount of profit made per week (float)
-    float amtProfitWeekly = 87944.36f;
+    float amtProfitWeekly = 14944.36f;
     //    - number of shopping carts (int)
     int numShoppingCarts = 128;
     //    - number of square feet (float)
@@ -467,24 +467,24 @@ struct GroceryStore
         std::string supplierName = "Darigold";   // - name of supplier
         int supplierID = 11111;   // - supplier's ID number
         std::string driverName = "John";   // - name of supplier's delivery driver
-        std::string supplierType = "Dairy";   // - type of products supplied
+        std::string supplierType = "Dairy";   // - type of product supplied
         int numDeliveryTrucks = 24;   // - number of delivery trucks
 
         // 3 member functions.  
         // they take multiple parameters. some parameters have default values.
         // the parameter names are related to the work the function will perform.
         // all function and variable names conform to the course coding standard, described in the Readme.MD file
-        void paySupplier(int invoiceNumber);  // pay the supplier's ivoice
-        void orderFilled(int orderNumber, float orderAmount, float dateDelivered, bool itemsMissing);
-        float placeNewOrder(int orderNumber, float orderAmount); // place a new order with supplier
+        void paySupplier(int invoiceNumber);  // pay the supplier's invoice
+        void orderFilled(int orderNumber, float orderAmount, float dateDelivered, bool itemsMissing); // post-order delivery data
+        void placeNewOrder(int orderNumber, float orderAmount); // place a new order with supplier
     }; 
     //this is the end of the nested class
 
     //3 things it can do:
     //    - replenish inventory
     void orderInventory(Supplier supplier); 
-    //    - amount of groceries sold per month in dollars
-    void sellGroceries(double amtGroceriesSold);  
+    // building repairs and maintenance
+    void repairs(float repairBill);  
     //    - charge customer  //NOTE: function parameter is relevant to the amount of groceries purchased plus taxes
     float chargeCustomer(float groceriesPurchased, float taxRate);
 
@@ -524,7 +524,7 @@ struct Airplane
         //5 member variables with relevant data types.  the names are relevant to the UDT's purpose.
         int passengerAge = 55;   // passenger's age
         bool memberFFClub = true;    // member of frequent flyer club
-        int ffClubMemberNumber = 1111;   // - frequent flyer club number
+        int customerID = 1111;   // - passenger's id
         std::string customerName = "John Doe";  // customer's first and last name
         std::string customerNationality ="American";  // customer's nationality
 
@@ -534,8 +534,10 @@ struct Airplane
         // all function and variable names conform to the course coding standard, described in the Readme.MD file
         void provideMeal(std::string mealType = "lunch");
         void dietRestrictions(bool nonDairy = false, bool nutAllergy = false, bool vegetarian = false);
-        float getMilesTraveledAnnually(); // returns the number of miles customer traveled previous year
-    }; //this is the end of the nested class
+        float getMilesTraveledAnnually(customerID); // returns the number of miles customer traveled previous year
+    }; 
+    
+    //this is the end of the nested class
 
     //3 things it can do:
     //    - fly customer
@@ -573,6 +575,7 @@ struct Television
     int numUSB = 3;
     //    - wifi version (float)
     float wifiVersion = 6.f;
+
     //3 things it can do:
     //    - play audio
     void playAudio();
@@ -609,6 +612,7 @@ struct Refrigerator
     float energyUsed = 1.8f;
     //    - loudness in decibels (float)
     float loudness = 34.f;
+
     //3 things it can do:
     //    - keep food cold
     void keepFoodCold();
@@ -645,6 +649,7 @@ struct Keyboard
     float length = 43.94f;
     //    - width in cm (float)
     float width = 13.97f;
+
     //3 things it can do:
     //    - illuminate
     void illuminate();
@@ -681,6 +686,7 @@ struct Speakers
     float speakersize = 3.6f;
     //    - shape of speakers (std::string)
     std::string speakerShape = "oval";
+
     //3 things it can do:
     //    - play music
     void playMusic();
@@ -717,6 +723,7 @@ struct Display
     float displayHeight = 7.65f;
     //    - maximum brightness (float)
     float maximumBrightness = 255.f;
+
     //3 things it can do:
     //    - change brightness
     void adjustBrightness();
@@ -753,6 +760,7 @@ struct Cpu
     float powerConsumed = 85.2f;
     //    - amount of cache mb (float)
     float memoryCache = 2.5f; 
+
     //3 things it can do:
     //    - perform calculations
     void performCalculations();
@@ -789,6 +797,7 @@ struct Memory
     std::string brand = "Kingston";
     //    - model number (std::string)
     std::string model = "KF432S20IB/16";
+
     //3 things it can do:
     //    - store user data
     void storeUserData();
@@ -825,6 +834,7 @@ struct Laptop
     Cpu cpu;
     //    - Memory
     Memory memory;
+
     //3 things it can do:
     //    - play audio
     bool playAudio(std::string audioFileName);  // returns true if file is found and is the correct format
